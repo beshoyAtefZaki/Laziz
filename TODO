@@ -1,0 +1,15 @@
+Company 
+
+Item 
+name 
+photo 
+category 
+uom 
+options 
+enable
+
+
+
+
+category -- link -- check box 
+uom -- link  
