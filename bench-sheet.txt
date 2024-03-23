@@ -1,0 +1,16 @@
+#version -14 
+bench init { you project name} --frappe-branch version-14 --python=python3.8 
+bench new-site {your site name } --db-name {data-base name}  # create new -site
+bench use {your site name}
+bench get-app https://github.com/beshoyAtefZaki/Laziz.git  # get app from remote repo
+bench install-app laziz # to install app
+bench set-config developer_mode 1  -- To activate developer mode  
+
+
+go to root/apps/laziz 
+git add .
+git stash 
+git pull upstream master 
+git branch {user name}
+git check out {user name}
+
