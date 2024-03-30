@@ -1,15 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
- "creation": "2024-03-09 16:03:16.593244",
+ "creation": "2024-03-15 20:10:09.110751",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "company",
-  "name1"
+  "name1",
+  "photo",
+  "category",
+  "uom",
+  "options",
+  "enable",
+  "route"
  ],
  "fields": [
   {
@@ -23,16 +28,49 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "uom"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Data",
+   "label": "Options"
+  },
+  {
+   "fieldname": "enable",
+   "fieldtype": "Int",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route",
+   "reqd": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-15 20:17:08.044855",
+ "modified": "2024-03-15 20:29:04.734778",
  "modified_by": "Administrator",
  "module": "Laziz",
- "name": "Category",
+ "name": "Item",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -49,6 +87,7 @@
    "write": 1
   }
  ],
+ "route": "item",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
