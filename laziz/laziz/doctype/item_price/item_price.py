@@ -13,4 +13,4 @@ class ItemPrice(Document):
 
 	def validate_uom(self) :
 		if self.uom not in frappe.get_doc("Item" , self.item).uom_list() :
-			throw("Not allowed")
+			throw(_("Not allowed"))
