@@ -1,0 +1,22 @@
+create new doctype 
+
+item price   
+
+fields :
+    item -- link item 
+    uom -- link uom # search fetch from item
+    has size  check box # if checked 
+    size  link --size 
+    price currency  
+nameing -- filed item 
+
+
+documentation 
+https://frappeframework.com/docs/user/en/basics/doctypes/fieldtypes 
+
+https://frappeframework.com/docs/user/en/basics/doctypes/child-doctype 
+
+https://frappeframework.com/docs/user/en/basics/doctypes/controllers
+
+
+
