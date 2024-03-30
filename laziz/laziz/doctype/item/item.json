@@ -54,6 +54,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "default_uom",
    "fieldtype": "Link",
    "label": "Default UOM",
@@ -97,8 +98,13 @@
  ],
  "image_field": "photo",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-03-23 15:38:15.296386",
+ "links": [
+  {
+   "link_doctype": "Item Price",
+   "link_fieldname": "item"
+  }
+ ],
+ "modified": "2024-03-30 16:27:05.577182",
  "modified_by": "Administrator",
  "module": "Laziz",
  "name": "Item",
@@ -118,7 +124,10 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
 }

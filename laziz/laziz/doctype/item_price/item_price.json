@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{item}-.{###}",
+ "creation": "2024-03-30 13:06:36.693172",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_mobxj",
+  "uom",
+  "section_break_rqftx",
+  "from_date",
+  "column_break_nxjvk",
+  "to_date",
+  "section_break_ekr0t",
+  "has_size",
+  "size",
+  "section_break_9vyas",
+  "price",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item ",
+   "options": "Item"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "uom",
+   "options": "uom",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "item.has_size",
+   "fieldname": "has_size",
+   "fieldtype": "Check",
+   "label": "has size"
+  },
+  {
+   "depends_on": "eval:doc.has_size==1;",
+   "fieldname": "size",
+   "fieldtype": "Link",
+   "label": "Size",
+   "mandatory_depends_on": "eval:doc.has_size==1;",
+   "options": "Size"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "column_break_mobxj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rqftx",
+   "fieldtype": "Section Break",
+   "label": "Valide dates"
+  },
+  {
+   "fieldname": "section_break_9vyas",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nxjvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ekr0t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Enable\nDisable",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-30 16:32:10.332557",
+ "modified_by": "Administrator",
+ "module": "Laziz",
+ "name": "Item Price",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
