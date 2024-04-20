@@ -2,11 +2,11 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
 from frappe.model.naming import getseries
 
-class Item(Document):
+class Item(WebsiteGenerator):
 
 	def validate(self) :
 		pass
@@ -36,17 +36,22 @@ def validate_uom_self(item , uom , *args , **kwargs) :
 		 return False
 
 
+
+
+
+	
+
 @frappe.whitelist()
 def get_item_uom_list(doctype, txt, searchfield, start, page_len, filters) :
 	reponse = []
 	if not filters :
 		frappe.throw("filters Missing")
-	print(filters.get("item"))
 	if not filters.get("item") :
 		frappe.throw("Item required ")
 
 	item =  frappe.get_doc("Item" , filters.get("item") ) 
 	data = item.uom_list()
+    # vaildte use input 
 
 	reponse = ((i,) for i in data)
 	accepted_data = frappe.db.sql(f""" SELECT uom FROM `tabItem UOM` WHERE parent = '{filters.get("item")}' """)

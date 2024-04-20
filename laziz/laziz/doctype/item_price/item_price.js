@@ -2,9 +2,9 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Item Price', {
-	refresh: function(frm) {
+	refresh: function(DYNAMIC) {
 		// frm.events.setup_item_qyery(frm)
-		console.log("refresh")
+		console.log("DYNAMIC" , DYNAMIC)
 	},
 
 	setup_item_qyery:function(frm) {
@@ -16,13 +16,15 @@ frappe.ui.form.on('Item Price', {
 			}
 		})
 	},
-	setup_uom_query(frm) {
-		console.log("Setup query ")
+	 setup_uom_query(frm) {
+	
+		
 		frm.set_query('uom', () => {
 			return {
 				query: 'laziz.laziz.doctype.item.item.get_item_uom_list',
 				filters: {
-					"item": frm.doc.item
+				  "item": frm.doc.item
+					
 				}
 			}
 		})
@@ -30,7 +32,7 @@ frappe.ui.form.on('Item Price', {
 	item:function(frm) {
 		frm.doc.uom =""
 		frm.refresh_field("uom")
-		frm.events.setup_uom_query(frm)
+		 frm.events.setup_uom_query(frm)
 	},
 	uom:function(cur_frm){
 		console.log(cur_frm.doc.uom)

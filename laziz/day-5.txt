@@ -1,0 +1,6 @@
+1 - make item price has web view 
+
+2 - create list to view all item price with css  and usin bootstrap template 
+
+3 - create detail page for item price  and view item image  and item name on it 
+
