@@ -1,5 +1,6 @@
 {
     "actions": [],
+    "allow_guest_to_view": 1,
     "allow_rename": 1,
     "autoname": "field:item_name",
     "creation": "2024-03-23 13:34:18.440652",
@@ -19,7 +20,9 @@
         "column_break_h6yz9",
         "photo",
         "size_section",
-        "item_size"
+        "item_size",
+        "route",
+        "puclished"
     ],
     "fields": [
         {
@@ -54,6 +57,7 @@
             "reqd": 1
         },
         {
+            "allow_in_quick_entry": 1,
             "fieldname": "default_uom",
             "fieldtype": "Link",
             "label": "Default UOM",
@@ -93,12 +97,31 @@
             "fieldtype": "Table",
             "label": "Item size",
             "options": "Item size"
+        },
+        {
+            "fieldname": "route",
+            "fieldtype": "Data",
+            "label": "Route"
+        },
+        {
+            "default": "0",
+            "fieldname": "puclished",
+            "fieldtype": "Check",
+            "label": "Puclished"
         }
     ],
+    "has_web_view": 1,
     "image_field": "photo",
     "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2024-03-23 15:38:15.296386",
+    "is_published_field": "puclished",
+    "links": [
+        {
+            "link_doctype": "Item Price",
+            "link_fieldname": "item"
+        }
+    ],
+    "make_attachments_public": 1,
+    "modified": "2024-04-20 14:44:43.013429",
     "modified_by": "Administrator",
     "module": "Laziz",
     "name": "Item",
@@ -118,7 +141,11 @@
             "write": 1
         }
     ],
+    "quick_entry": 1,
+    "route": "items",
     "sort_field": "modified",
     "sort_order": "DESC",
-    "states": []
+    "states": [],
+    "track_changes": 1,
+    "track_seen": 1
 }

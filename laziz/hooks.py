@@ -12,7 +12,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/laziz/css/laziz.css"
-# app_include_js = "/assets/laziz/js/laziz.js"
+app_include_js = "/assets/laziz/js/laziz.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/laziz/css/laziz.css"
@@ -29,7 +29,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"User" : "public/js/user.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -42,7 +42,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Accounts Manager": "home_page"
 # }
 
 # Generators
@@ -55,10 +55,10 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "laziz.utils.jinja_methods",
-#	"filters": "laziz.utils.jinja_filters"
-# }
+jinja = {
+	"methods": ["laziz.utils.jinja_methods", "laziz.utils.jinja_methods_2"],
+	# "filters": "laziz.utils.jinja_filters"
+}
 
 # Installation
 # ------------
@@ -130,6 +130,12 @@ app_license = "MIT"
 # ---------------
 
 # scheduler_events = {
+#         "5 0 * * *": [
+# 		"laziz.tasks.all"
+    
+#         ]
+# }
+
 #	"all": [
 #		"laziz.tasks.all"
 #	],

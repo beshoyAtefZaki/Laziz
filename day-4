@@ -1,0 +1,29 @@
+links -- view fields -- https://frappeframework.com/docs/user/en/basics/doctypes/docfield
+frappe orm https://frappeframework.com/docs/user/en/api/document 
+ database API  https://frappeframework.com/docs/user/en/api/database
+ frappe call https://frappeframework.com/docs/user/en/guides/basics/frappe_ajax_call 
+
+
+
+access treminal -- bench console 
+
+
+
+bench enable-scheduler
+
+
+
+git 
+path ../apps/laziz 
+ git add .
+ git commit -m "day 2" 
+ git chekout master 
+ git pull upstream master 
+ git branch day-{your name }-03 
+ git checkout day-{your name }-03 
+
+
+
+ Task apply filter on size filed (doctype Item Price) 
+
+
