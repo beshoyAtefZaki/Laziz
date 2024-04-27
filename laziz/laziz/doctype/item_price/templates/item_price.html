@@ -1,0 +1,55 @@
+{% extends "templates/form_template.html" %} {% block content %} {% endblock %}
+{% block page_content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ doc.name.split("-")[0] }}</h5>
+                    <ul class="list-group list-group-flush">
+                        {% set prices = frappe.get_all('Item Price',
+                        filters={"item": ["IN", doc.name.split("-")[0]],
+                        "status": "enable"}, fields=["price", "from_date",
+                        "to_date", "size", "status"]) %} {% for price in prices
+                        %}
+                        <li class="list-group-item">
+                            <span class="badge bg-primary"
+                                >{{ price.price }}$</span
+                            >
+                            <span class="date"
+                                >{{ price.from_date.strftime('%B %d, %Y') }} -
+                                {{ price.to_date.strftime('%B %d, %Y') }}</span
+                            >
+                            {% if price.status == 'Enable' %}
+                            <span class="badge bg-success"
+                                >{{ price.status }}</span
+                            >
+                            {% else %}
+                            <span class="badge bg-danger"
+                                >{{ price.status }}</span
+                            >
+                            {% endif %}
+                            <span class="badge bg-secondary"
+                                >{{ price.size }}</span
+                            >
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .date {
+        font-size: 14px;
+        color: #6c757d;
+        font-style: italic;
+    }
+</style>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

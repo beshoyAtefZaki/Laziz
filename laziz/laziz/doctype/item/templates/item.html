@@ -71,14 +71,10 @@
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <a href="/price/{{doc.name}}" class="btn btn-primary">See prices</a>
     </div>
 
-    {%set r = jinja_methods() %}
-    <h1>{{r }}</h1>
-
-    {%set r2 = jinja_methods_2() %}
-    <h1>{{r2}}</h1>
     {% set price = frappe.get_all('Item Price', filters= {"item" : doc.name
     ,"status" :"enable"} , fields =["price" , "size"]) %}
 
