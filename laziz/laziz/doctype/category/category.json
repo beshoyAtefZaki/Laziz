@@ -21,13 +21,15 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name",
+   "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-09 16:03:28.780330",
+ "modified": "2024-03-15 20:17:08.044855",
  "modified_by": "Administrator",
  "module": "Laziz",
  "name": "Category",

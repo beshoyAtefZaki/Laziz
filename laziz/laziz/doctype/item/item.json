@@ -1,151 +1,151 @@
 {
- "actions": [],
- "allow_guest_to_view": 1,
- "allow_rename": 1,
- "autoname": "field:item_name",
- "creation": "2024-03-23 13:34:18.440652",
- "default_view": "List",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "item_name",
-  "default_uom",
-  "disable",
-  "has_size",
-  "column_break_stxxp",
-  "category",
-  "section_break_xsju4",
-  "item_uom",
-  "column_break_h6yz9",
-  "photo",
-  "size_section",
-  "item_size",
-  "route",
-  "puclished"
- ],
- "fields": [
-  {
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Item Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "photo",
-   "fieldtype": "Attach Image",
-   "label": "Photo",
-   "reqd": 1
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "column_break_h6yz9",
-   "fieldtype": "Section Break",
-   "label": "Photo Section"
-  },
-  {
-   "fieldname": "column_break_stxxp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "category",
-   "fieldtype": "Link",
-   "label": "Category ",
-   "options": "Category",
-   "reqd": 1
-  },
-  {
-   "allow_in_quick_entry": 1,
-   "fieldname": "default_uom",
-   "fieldtype": "Link",
-   "label": "Default UOM",
-   "options": "uom"
-  },
-  {
-   "fieldname": "section_break_xsju4",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "item_uom",
-   "fieldtype": "Table",
-   "label": "Item UOM",
-   "options": "Item UOM"
-  },
-  {
-   "default": "0",
-   "fieldname": "disable",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Disable"
-  },
-  {
-   "default": "0",
-   "fieldname": "has_size",
-   "fieldtype": "Check",
-   "label": "Has Size"
-  },
-  {
-   "depends_on": "eval:doc.has_size==1;",
-   "fieldname": "size_section",
-   "fieldtype": "Section Break",
-   "label": "Size"
-  },
-  {
-   "fieldname": "item_size",
-   "fieldtype": "Table",
-   "label": "Item size",
-   "options": "Item size"
-  },
-  {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "Route"
-  },
-  {
-   "default": "0",
-   "fieldname": "puclished",
-   "fieldtype": "Check",
-   "label": "Puclished"
-  }
- ],
- "has_web_view": 1,
- "image_field": "photo",
- "index_web_pages_for_search": 1,
- "is_published_field": "puclished",
- "links": [
-  {
-   "link_doctype": "Item Price",
-   "link_fieldname": "item"
-  }
- ],
- "make_attachments_public": 1,
- "modified": "2024-04-20 14:44:43.013429",
- "modified_by": "Administrator",
- "module": "Laziz",
- "name": "Item",
- "naming_rule": "By fieldname",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "quick_entry": 1,
- "route": "items",
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1,
- "track_seen": 1
+    "actions": [],
+    "allow_guest_to_view": 1,
+    "allow_rename": 1,
+    "autoname": "field:item_name",
+    "creation": "2024-03-23 13:34:18.440652",
+    "default_view": "List",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "item_name",
+        "default_uom",
+        "disable",
+        "has_size",
+        "column_break_stxxp",
+        "category",
+        "section_break_xsju4",
+        "item_uom",
+        "column_break_h6yz9",
+        "photo",
+        "size_section",
+        "item_size",
+        "route",
+        "puclished"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "photo",
+            "fieldtype": "Attach Image",
+            "label": "Photo",
+            "reqd": 1
+        },
+        {
+            "collapsible": 1,
+            "fieldname": "column_break_h6yz9",
+            "fieldtype": "Section Break",
+            "label": "Photo Section"
+        },
+        {
+            "fieldname": "column_break_stxxp",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "category",
+            "fieldtype": "Link",
+            "label": "Category ",
+            "options": "Category",
+            "reqd": 1
+        },
+        {
+            "allow_in_quick_entry": 1,
+            "fieldname": "default_uom",
+            "fieldtype": "Link",
+            "label": "Default UOM",
+            "options": "uom"
+        },
+        {
+            "fieldname": "section_break_xsju4",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "item_uom",
+            "fieldtype": "Table",
+            "label": "Item UOM",
+            "options": "Item UOM"
+        },
+        {
+            "default": "0",
+            "fieldname": "disable",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Disable"
+        },
+        {
+            "default": "0",
+            "fieldname": "has_size",
+            "fieldtype": "Check",
+            "label": "Has Size"
+        },
+        {
+            "depends_on": "eval:doc.has_size==1;",
+            "fieldname": "size_section",
+            "fieldtype": "Section Break",
+            "label": "Size"
+        },
+        {
+            "fieldname": "item_size",
+            "fieldtype": "Table",
+            "label": "Item size",
+            "options": "Item size"
+        },
+        {
+            "fieldname": "route",
+            "fieldtype": "Data",
+            "label": "Route"
+        },
+        {
+            "default": "0",
+            "fieldname": "puclished",
+            "fieldtype": "Check",
+            "label": "Puclished"
+        }
+    ],
+    "has_web_view": 1,
+    "image_field": "photo",
+    "index_web_pages_for_search": 1,
+    "is_published_field": "puclished",
+    "links": [
+        {
+            "link_doctype": "Item Price",
+            "link_fieldname": "item"
+        }
+    ],
+    "make_attachments_public": 1,
+    "modified": "2024-04-20 14:44:43.013429",
+    "modified_by": "Administrator",
+    "module": "Laziz",
+    "name": "Item",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "quick_entry": 1,
+    "route": "items",
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1,
+    "track_seen": 1
 }
